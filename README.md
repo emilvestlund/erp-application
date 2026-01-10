@@ -4,6 +4,8 @@
 
 This project is a desktop-based **Enterprise Resource Planning (ERP)** system developed in **C# and .NET (Windows Forms)** as part of a university coursework assignment. The system demonstrates core ERP functionality such as inventory management, sales processing, persistent storage, and integration with an external API.
 
+*Grossit.cs was redacted due to API credentials being present.*
+
 The application is designed to manage multiple product categories and provides a graphical user interface for interacting with inventory and sales workflows.
 
 ---
