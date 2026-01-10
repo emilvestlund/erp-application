@@ -573,17 +573,7 @@ namespace Affärssystem //Emil Vestlund, DVGB07, Labboration 4, Grundversion (f�
 
                     if (ValidatePlaytime.Length <= 0 || !char.IsDigit(ValidatePlaytime[0]) || ValidatePlaytime[0] == '0')
                     {
-                        throw new Exception("Speltid måste vara ett positivt heltal!");                                     /********************************************************
-                                                                                                                            *    Title: <title of program/source code>
-                                                                                                                            *    Author: <ChatGPT>
-                                                                                                                            *    Date: <2024-03-26>
-                                                                                                                            *    Code version: <1.0>
-                                                                                                                            *    Availability: <https://chat.openai.com/>
-                                                                                                                            *    isDigit villkoret är från ChatGPT, först kollar vi om värdet är mindre eller = 0,
-                                                                                                                            *     eller om första värdet inte är en siffra, och ifall det är "0",
-                                                                                                                            *     isåfall kastar vi undantag.
-                                                                                                                            *
-                                                                                                                            *********************************************************/
+                        throw new Exception("Speltid måste vara ett positivt heltal!");                                 
                     }
 
 
@@ -603,20 +593,7 @@ namespace Affärssystem //Emil Vestlund, DVGB07, Labboration 4, Grundversion (f�
                 switch (ValidateSelectedProduct) // Kontrollerar vilken produktkategori som är vald och om produkten redan finns i lagret
                 {
                     case "Böcker":
-                        var existingBook = inventory.BookList.FirstOrDefault(book => book.ProductName == localValidateName); /********************************************************
-                                                                                                                            *    Title: <title of program/source code>
-                                                                                                                            *    Author: <ChatGPT>
-                                                                                                                            *    Date: <2024-03-26>
-                                                                                                                            *    Code version: <1.0>
-                                                                                                                            *    Availability: <https://chat.openai.com/>
-                                                                                                                            *    FirstOrDefault är från ChatGPT, jag visste att det skulle finnas något som hittar
-                                                                                                                            *    två gemensamma attribut ur två listor vilket motsvarar .Find() i Javascript.
-                                                                                                                            *    FirstOrDefault returnerar första träffen i sekvens som stämmer överens med villkoret.
-                                                                                                                            *    I vårt fall så kollar vi om det finns en bok med samma namn som invärdet ValidateName
-                                                                                                                            *    som matas in i en TextBox från användaren. Om vi finner en dublett så frågar vi användaren
-                                                                                                                            *    om hen vill uppdatera antalet på produkten.
-                                                                                                                            *
-                                                                                                                            *********************************************************/
+                        var existingBook = inventory.BookList.FirstOrDefault(book => book.ProductName == localValidateName); 
                         if (existingBook != null)
                         {
                             var result = MessageBox.Show($"Boken '{ValidateName}' finns redan i sortimentet. Vill du uppdatera antalet?", "Vill du uppdatera?", MessageBoxButtons.YesNoCancel); // Skapar en messagebox för att fråga om användaren vill uppdatera antalet av redan existerande bok, sedan hanterar vi valen.
